@@ -4,8 +4,8 @@
 This project involves the automation of data fetching from an S3 bucket, transforming the data, and loading it into an
 Amazon Redshift database. The ETL pipeline leverages AWS Glue for schema inference and transformation, 
 and AWS Lambda is used to trigger the ETL process when new files are uploaded to the S3 bucket.
----------------------------------------------------------------------------------------------------------------------------------------------
-## EXPLANATION FOR FILES IN GIT:
+
+### EXPLANATION FOR FILES IN GIT:
    I-The PNG files uploaded shows the process done in each AWS services to create a pipeline.
        1. S3_bucket_dataset.png --- Dataset stored in the S3 bucket.
        2. ETL_JOB_GRAPH.png --- ETL job Graph is created having S3 as source and Redshift as Destination and Changing schema , drop          
@@ -18,7 +18,7 @@ and AWS Lambda is used to trigger the ETL process when new files are uploaded to
     II-The python file 
          1. ETL_JOB_SCRIPT.py -- The python code for the ETL JOB run is in this file. 
          2. Lambda_Triggercode.py -- The lambda function python code written to trigger the crawler and ETL JOB is in this file. 
----------------------------------------------------------------------------------------------------------------------------------------------
+
 ### High-Level Workflow:
 1. **AWS S3**: Stores the incoming data files (e.g., CSV, etc.).
 2. **AWS Glue Crawler**: Infers the schema of the files stored in S3.
