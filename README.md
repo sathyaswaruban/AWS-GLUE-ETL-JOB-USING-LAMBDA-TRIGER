@@ -7,14 +7,14 @@ and AWS Lambda is used to trigger the ETL process when new files are uploaded to
 
 ### EXPLANATION FOR FILES IN GIT:
 The PNG files uploaded shows the process done in each AWS services to create a pipeline:
-1. S3_bucket_dataset.png --- Dataset stored in the S3 bucket.
-2. ETL_JOB_GRAPH.png --- ETL job Graph is created having S3 as source and Redshift as Destination and Changing schema , drop          
+1. **S3_bucket_dataset.png** --- Dataset stored in the S3 bucket.
+2. **ETL_JOB_GRAPH.png** --- ETL job Graph is created having S3 as source and Redshift as Destination and Changing schema , drop          
                                duplicates as transformation.
-3. Successful_CRAWLER_RUN.png --- A crawler is creasted and successfully fetched the schema of dataset in s3 bucket.
-4. S3_Bucket_added_as_trigger.png --- A lamda function is created and s3 bucket is added as a trigger.
-5. Successful_run_of_ETLJOB.png --- The successful run of ETL JOB after lambda trigers the etl job when a new file uploaded in s3                                                bucket
-6. Cloud_logs_For_triggering_both_Crawler and ETLjob.png --- Shows the log values while the lambda function runs to trigger crawler                                                                       and Etl job.
-7. VALUES_STORED_IN_REDSHIFT_BY_ETLJOB.png --- Shows that the data from s3 bucket stored in redshift database table sample_insurance                                                        without any dupliucate values.
+3. **Successful_CRAWLER_RUN.png** --- A crawler is creasted and successfully fetched the schema of dataset in s3 bucket.
+4. **S3_Bucket_added_as_trigger.png** --- A lamda function is created and s3 bucket is added as a trigger.
+5. **Successful_run_of_ETLJOB.png** --- The successful run of ETL JOB after lambda trigers the etl job when a new file uploaded in s3                                                bucket
+6. **Cloud_logs_For_triggering_both_Crawler and ETLjob.png** --- Shows the log values while the lambda function runs to trigger crawler                                                                       and Etl job.
+7. **VALUES_STORED_IN_REDSHIFT_BY_ETLJOB.png** --- Shows that the data from s3 bucket stored in redshift database table sample_insurance                                                        without any dupliucate values.
 The python files: 
 1. **ETL_JOB_SCRIPT.py** -- The python code for the ETL JOB run is in this file. 
 2. **Lambda_Triggercode.py** -- The lambda function python code written to trigger the crawler and ETL JOB is in this file. 
